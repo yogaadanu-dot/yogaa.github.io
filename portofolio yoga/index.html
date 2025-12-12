@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portofolio Danu Prayoga</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+      body { font-family: 'Poppins', sans-serif; }
+
+      /* NAVBAR */
+      .navbar {
+        background: transparent;
+        border: none;
+        transition: 0.4s;
+        padding: 15px 0;
+      }
+      .navbar.scrolled {
+        background: #ffffff;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        padding: 10px 0;
+      }
+      .navbar a { font-weight: 500; }
+
+      /* JUMBOTRON / HEADER */
+      .profile-img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .jumbotron {
+        margin-top: 70px;
+        background: #fafafa;
+      }
+
+      /* HOBI IMG HOVER */
+      .hobi-img {
+        width: 100%;
+        border-radius: 12px;
+        transition: 0.3s ease-in-out;
+      }
+      .hobi-img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      }
+
+      /* ANIMASI FADE IN */
+      .fade-section {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: 0.8s ease-out;
+      }
+      .fade-section.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* BACK TO TOP BUTTON */
+      #topBtn {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        background: #007bff;
+        color: white;
+        padding: 10px 14px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        display: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      }
+      #topBtn:hover {
+        background: #0056c7;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Danu Prayoga</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">About</a></li>
+          <li><a href="#hobi">Hobi</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="jumbotron text-center fade-section">
+      <img src="yoga1.jpeg" alt="Foto Danu Prayoga" class="profile-img">
+      <h1>Danu Prayoga</h1>
+      <p>Sistem Informasi | Mahasiswa</p>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about fade-section" id="about">
+      <div class="container text-center">
+        <h2>About</h2>
+        <hr>
+        <p style="max-width:700px; margin:auto; font-size:16px; line-height:1.8;">
+          Halo! Aku <strong>Danu Prayoga Adinata</strong> — seorang mahasiswa Sistem Informasi yang suka ngulik hal-hal baru.
+          <br><br>
+          Biasanya aku ngisi waktu dengan ngoding, ngedit, atau dengerin musik sambil mikirin ide random 🤭
+          <br><br>
+          Buatku, belajar itu nggak harus kaku. Selama ada rasa penasaran, semua hal bisa jadi seru.
+        </p>
+      </div>
+    </section>
+
+    <!-- HOBI -->
+    <section class="hobi fade-section" id="hobi">
+      <div class="container text-center">
+        <h2>Hobi</h2>
+        <hr>
+
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="yoga2.jpeg" class="hobi-img">
+            <h4>Futsal Oke</h4>
+          </div>
+
+          <div class="col-sm-4">
+            <img src="yoga3.jpeg" class="hobi-img">
+            <h4>Ndaki Oke</h4>
+          </div>
+
+          <div class="col-sm-4">
+            <img src="yoga4.jpeg" class="hobi-img">
+            <h4>Ngopi Oke</h4>
+          </div>
+        </div>
+
+        <div style="margin-top:20px;">
+          <hr>
+          <p><em>"Sesuai Mood."</em></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact fade-section" id="contact">
+      <div class="container">
+        <h2 class="text-center">Contact</h2>
+        <hr>
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <form>
+              <div class="form-group">
+                <label>Nama</label>
+                <input type="text" class="form-control" placeholder="Masukkan nama">
+              </div>
+
+              <div class="form-group">
+                <label>Nomor Telepon</label>
+                <input type="tel" class="form-control" placeholder="Masukkan nomor telepon">
+              </div>
+
+              <div class="form-group">
+                <label>Pilih Kategori</label>
+                <select class="form-control">
+                  <option>Pilih Kategori</option>
+                  <option>Mabar Mobile Legend</option>
+                  <option>Ngopi</option>
+                  <option>Info in kemana aja gas</option>
+                </select>
+              </div>
+
+              <textarea class="form-control" rows="5" placeholder="Masukkan pesan"></textarea>
+              <br>
+              <button class="btn btn-primary btn-block">Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="fade-section">
+      <div class="container text-center">
+        <p>&copy; Visca Barca ❤️💙 <a href="#">Danu Prayoga</a></p>
+        <a href="#" class="btn btn-primary">Instagram</a>
+      </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <div id="topBtn">&#8593;</div>
+
+    <!-- SCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- SCROLL + ANIMATION -->
+    <script>
+      // NAVBAR CHANGE
+      $(window).scroll(function(){
+        if($(this).scrollTop() > 50){
+          $('.navbar').addClass('scrolled');
+          $('#topBtn').fadeIn();
+        } else {
+          $('.navbar').removeClass('scrolled');
+          $('#topBtn').fadeOut();
+        }
+      });
+
+      // SMOOTH SCROLL
+      $(document).on('click', 'a[href^="#"]', function(e){
+        e.preventDefault();
+        $('html,body').animate({
+          scrollTop: $($.attr(this,'href')).offset().top - 60
+        }, 700);
+      });
+
+      // ANIMATION APPEAR
+      function checkFade(){
+        $('.fade-section').each(function(){
+          let top = this.getBoundingClientRect().top;
+          if(top < window.innerHeight - 50){
+            this.classList.add('show');
+          }
+        });
+      }
+      window.addEventListener('scroll', checkFade);
+      window.addEventListener('load', checkFade);
+
+      // TOP BUTTON
+      $('#topBtn').click(function(){
+        $('html,body').animate({scrollTop:0},700);
+      });
+    </script>
+
+  </body>
+</html>
